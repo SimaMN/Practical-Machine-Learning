@@ -121,9 +121,9 @@ confMatRandForest <- confusionMatrix(predictRandForest, TestSet$classe)
 confMatRandForest
 
 # plot matrix results
-plot(confMatRandForest$table, col = confMatRandForest$byClass, 
-     main = paste("Random Forest - Accuracy =",
-                  round(confMatRandForest$overall['Accuracy'], 4)))
+# plot(confMatRandForest$table, col = confMatRandForest$byClass, 
+#      main = paste("Random Forest - Accuracy =",
+#                   round(confMatRandForest$overall['Accuracy'], 4)))
 
 ```
 
