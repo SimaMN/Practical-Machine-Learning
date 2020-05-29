@@ -98,9 +98,9 @@ dim(TrainSet)
 # Correlation Analysis
 
 ```{r, cache = T, warning=FALSE, message=FALSE}
-corMatrix <- cor(TrainSet[, -54])
-corrplot(corMatrix, order = "FPC", method = "color", type = "lower", 
-         tl.cex = 0.8, tl.col = rgb(0, 0, 0))
+# corMatrix <- cor(TrainSet[, -54])
+# corrplot(corMatrix, order = "FPC", method = "color", type = "lower", 
+#          tl.cex = 0.8, tl.col = rgb(0, 0, 0))
 
 ```
 # Prediction Model Building
@@ -121,9 +121,9 @@ confMatRandForest <- confusionMatrix(predictRandForest, TestSet$classe)
 confMatRandForest
 
 # plot matrix results
-# plot(confMatRandForest$table, col = confMatRandForest$byClass, 
-#      main = paste("Random Forest - Accuracy =",
-#                   round(confMatRandForest$overall['Accuracy'], 4)))
+plot(confMatRandForest$table, col = confMatRandForest$byClass,
+     main = paste("Random Forest - Accuracy =",
+                  round(confMatRandForest$overall['Accuracy'], 4)))
 
 ```
 
